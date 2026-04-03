@@ -1,35 +1,36 @@
 {{!< default}}
 
 <div class="gh-page">
-    <div class="gh-container">
-
-        {{#tag}}
-        <header class="gh-page-head">
-
-            <h1>{{name}}</h1>
-
-            <p>
-                {{#if description}}
-                    {{description}}
-                {{else}}
-                    A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
-                {{/if}}
+    <div class="gh-container gh-terminal-layout">
+        <section class="gh-terminal-main">
+            {{#tag}}
+            <p class="gh-command-line">
+                <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
+                <span class="gh-command-text">grep -R "{{name}}" ./posts</span>
             </p>
 
-            {{#if feature_image}}
-                <img class="gh-page-image" src="{{feature_image}}" alt="{{name}}" />
-            {{/if}}
+            <header class="gh-page-head">
+                <h1>{{name}}</h1>
 
-        </header>
-        {{/tag}}
+                <p>
+                    {{#if description}}
+                        {{description}}
+                    {{else}}
+                        A collection of {{plural ../pagination.total empty='posts' singular='% post' plural='% posts'}}
+                    {{/if}}
+                </p>
 
-        <div class="gh-postfeed">
-        {{#foreach posts}}
+                {{#if feature_image}}
+                    <img class="gh-page-image" src="{{feature_image}}" alt="{{name}}" />
+                {{/if}}
+            </header>
+            {{/tag}}
 
-            {{> "card"}} {{!-- partials/card.hbs --}}
-
-        {{/foreach}}
-        </div>
-
+            <div class="gh-postfeed">
+            {{#foreach posts}}
+                {{> "card"}}
+            {{/foreach}}
+            </div>
+        </section>
     </div>
 </div>

@@ -15,59 +15,51 @@
 </head>
 <body class="{{body_class}}">
 <div class="gh-viewport">
-
-<header id="gh-head" class="gh-head glow-underline">
-    <nav class="gh-head-inner gh-container">
-
-        <div class="gh-head-brand">
-            <a class="gh-head-logo" href="{{@site.url}}">
-                {{#if @site.logo}}
-                    <img src="{{@site.logo}}" alt="{{@site.title}}" />
-                {{else}}
-                    {{@site.title}}
-                {{/if}}
-            </a>
-            <a class="gh-burger" role="button" aria-label="menu">
-                <div class="gh-burger-box">
-                    <div class="gh-burger-inner"></div>
+    <div class="gh-shell">
+        <header id="gh-head" class="gh-head">
+            <div class="gh-head-top gh-container">
+                <p class="gh-head-title">{{@site.title}}@hexed:~</p>
+            </div>
+            <div class="gh-head-navline gh-container">
+                <div class="gh-head-brand">
+                    <a class="gh-head-logo" href="{{@site.url}}">
+                        {{#if @site.logo}}
+                            <img src="{{@site.logo}}" alt="{{@site.title}}" />
+                        {{else}}
+                            {{@site.title}}
+                        {{/if}}
+                    </a>
                 </div>
-            </a>
-        </div>
-        <div class="gh-head-menu">
-            {{navigation}}
-        </div>
-        <div class="gh-head-actions">
-            <div class="gh-head-actions-list">
-                {{search}}
-                {{#if @site.members_enabled}}
-                    {{^if @member}}
-                    <a class="gh-button" href="{{@site.signup_url}}">Subscribe</a>
-                    {{else}}
-                    <a class="gh-button" href="#/portal/account">Account</a>
+                <nav class="gh-head-menu" aria-label="Primary navigation">
+                    {{navigation}}
+                </nav>
+                <div class="gh-head-actions">
+                    {{#if @site.members_enabled}}
+                        {{^if @member}}
+                            <a class="gh-shell-action" href="{{@site.signup_url}}">subscribe</a>
+                        {{else}}
+                            <a class="gh-shell-action" href="#/portal/account">account</a>
+                        {{/if}}
                     {{/if}}
-                {{/if}}
+                </div>
+            </div>
+        </header>
+
+        <main class="gh-main">
+            {{{body}}}
+            {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
+        </main>
+    </div>
+
+    <footer class="gh-foot">
+        <div class="gh-container">
+            <div class="gh-foot-meta">
+                <span>&copy; {{date format="YYYY"}} {{@site.title}}</span>
+                <span class="gh-foot-separator">::</span>
+                <span>{{@site.description}}</span>
             </div>
         </div>
-    </nav>
-</header>
-
-<main class="gh-main">
-
-    {{{body}}}
-    {{!-- All content gets inserted here, index.hbs, post.hbs, etc --}}
-
-</main>
-
-<footer class="gh-foot">
-    <div class="gh-container">
-        <div class="gh-foot-meta">
-            <a>&copy; {{date format="YYYY"}}</a> Hexed.
-            All rights reserved.
-        </div>
-    </div>
-</footer>
-
-
+    </footer>
 </div>
 
 {{!-- <foot> --}}
