@@ -4,13 +4,34 @@
         <section class="gh-terminal-main">
             <p class="gh-command-line">
                 <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
-                <span class="gh-command-text">ls ./posts</span>
+                <span class="gh-command-text">whoami</span>
+            </p>
+
+            <p class="gh-terminal-intro">{{@site.title}} {{#if @site.description}}- {{@site.description}}{{/if}}</p>
+
+            <p class="gh-command-line">
+                <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
+                <span class="gh-command-text">cat ./posts/README</span>
             </p>
 
             <div class="gh-postfeed">
             {{#foreach posts}}
                 {{> "card" page=../pagination.page }}
             {{/foreach}}
+            </div>
+
+            <p class="gh-command-line gh-command-line-spaced">
+                <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
+                <span class="gh-command-text">ls -la ./posts/</span>
+            </p>
+
+            <div class="gh-terminal-listing">
+                <p>total {{pagination.total}}</p>
+                <p>drwxr-xr-x  {{pagination.total}} posts  staff  4096  {{date format="MMM DD HH:mm"}} <span class="gh-dim">.</span></p>
+                <p>drwxr-xr-x  1 root   wheel  4096  {{date format="MMM DD HH:mm"}} <span class="gh-dim">..</span></p>
+                {{#foreach posts}}
+                    <p>-rw-r--r--  1 post   post   {{date format="MMM DD YYYY"}}  <a href="{{url}}">{{slug}}.md</a></p>
+                {{/foreach}}
             </div>
 
             <noscript>

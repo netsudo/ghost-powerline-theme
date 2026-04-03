@@ -10,6 +10,12 @@
     --color-bg: #1e2326;
     --color-bg-alt: #272e33;
     --color-bg-soft: #2e383c;
+    --color-tab-active-bg: #272e33;
+    --color-tab-active-fg: #d3c6aa;
+    --color-tab-inactive-bg: #374145;
+    --color-tab-inactive-fg: #9da9a0;
+    --color-tab-bar-bg: #2e383c;
+    --color-tab-hover-fg: #f3ead3;
     --color-success: #a7c080;
     --color-error: #e67e80;
     --color-accent-blue: #7fbbb3;
@@ -20,9 +26,9 @@
     --shadow-color: rgba(0, 0, 0, 0.35);
 
     /* Fonts */
-    --font-sans-serif: "IBM Plex Mono", "JetBrains Mono", "Iosevka", "SFMono-Regular", "Menlo", monospace;
-    --font-serif: "IBM Plex Mono", "JetBrains Mono", "Iosevka", "SFMono-Regular", "Menlo", monospace;
-    --font-mono: "IBM Plex Mono", "JetBrains Mono", "Iosevka", "SFMono-Regular", "Menlo", monospace;
+    --font-sans-serif: "Terminess Nerd Font Mono", "Terminess Nerd Font", "Terminus", "Hack Nerd Font Mono", "Hack Nerd Font", "Hack", "IBM Plex Mono", "JetBrains Mono", "Iosevka", "SFMono-Regular", "Menlo", monospace;
+    --font-serif: "Terminess Nerd Font Mono", "Terminess Nerd Font", "Terminus", "Hack Nerd Font Mono", "Hack Nerd Font", "Hack", "IBM Plex Mono", "JetBrains Mono", "Iosevka", "SFMono-Regular", "Menlo", monospace;
+    --font-mono: "Terminess Nerd Font Mono", "Terminess Nerd Font", "Terminus", "Hack Nerd Font Mono", "Hack Nerd Font", "Hack", "IBM Plex Mono", "JetBrains Mono", "Iosevka", "SFMono-Regular", "Menlo", monospace;
     --font-light: 100;
     --font-normal: 400;
     --font-bold: 700;
