@@ -86,7 +86,34 @@
 .gh-content > h4::before,
 .gh-content > h5::before,
 .gh-content > h6::before {
-    content: none;
+    margin-right: 0.9rem;
+    color: var(--color-accent-blue);
+    opacity: 0.9;
+    white-space: pre;
+}
+
+.gh-content > h1::before {
+    content: "#";
+}
+
+.gh-content > h2::before {
+    content: "##";
+}
+
+.gh-content > h3::before {
+    content: "###";
+}
+
+.gh-content > h4::before {
+    content: "####";
+}
+
+.gh-content > h5::before {
+    content: "#####";
+}
+
+.gh-content > h6::before {
+    content: "######";
 }
 
 .gh-content > ul,
