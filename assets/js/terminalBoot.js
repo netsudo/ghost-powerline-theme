@@ -4,6 +4,18 @@ const TYPE_SELECTOR = '[data-terminal-type]';
 
 const sleep = (ms) => new Promise((resolve) => window.setTimeout(resolve, ms));
 
+function hydrateDynamicTerminalText() {
+    document.querySelectorAll('[data-terminal-tail-base]').forEach((el) => {
+        const base = Number(el.getAttribute('data-terminal-tail-base'));
+
+        if (!Number.isFinite(base)) {
+            return;
+        }
+
+        el.textContent = `ls -la ./posts/ | tail -${base + 2}`;
+    });
+}
+
 function reveal(el) {
     el.classList.add('is-terminal-visible');
 }
@@ -69,11 +81,19 @@ async function runStep(step) {
 }
 
 export default async function terminalBoot() {
+    const bootRoot = document.querySelector('[data-terminal-boot-root]');
+
+    if (!bootRoot) {
+        return;
+    }
+
+    hydrateDynamicTerminalText();
+
     if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         return;
     }
 
-    const steps = document.querySelectorAll(STEP_SELECTOR);
+    const steps = bootRoot.querySelectorAll(STEP_SELECTOR);
 
     if (!steps.length) {
         return;

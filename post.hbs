@@ -14,10 +14,6 @@
                 <h1 class="gh-title" data-terminal-item>{{title}}</h1>
                 <span class="gh-post-meta" data-terminal-item>{{primary_author.name}} :: <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time></span>
 
-                {{#if custom_excerpt}}
-                <p class="gh-excerpt" data-terminal-item>{{custom_excerpt}}</p>
-                {{/if}}
-
                 {{#if feature_image}}
                 <figure class="gh-feature-image" data-terminal-item>
                     <picture>
@@ -113,18 +109,5 @@
         </aside>
     </div>
 </article>
-
-<aside class="gh-readmore">
-    <div class="gh-readmore-inner gh-container">
-        <div class="gh-readmore-next">
-            {{#next_post}}<a href="{{url}}">{{> "icons/arrow-left"}} <h4>{{title}}</h4></a>{{/next_post}}
-        </div>
-        <div class="gh-readmore-prev">
-            {{#prev_post}}<a href="{{url}}">
-                <h4>{{title}}</h4> {{> "icons/arrow-right"}}
-            </a>{{/prev_post}}
-        </div>
-    </div>
-</aside>
 
 {{/post}}

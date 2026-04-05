@@ -68,6 +68,27 @@
     line-height: 1.6em;
 }
 
+.gh-content > h1,
+.gh-content > h2,
+.gh-content > h3,
+.gh-content > h4,
+.gh-content > h5,
+.gh-content > h6 {
+    font-family: var(--font-mono);
+    font-weight: 700;
+    color: var(--color-primary);
+    text-align: left;
+}
+
+.gh-content > h1::before,
+.gh-content > h2::before,
+.gh-content > h3::before,
+.gh-content > h4::before,
+.gh-content > h5::before,
+.gh-content > h6::before {
+    content: none;
+}
+
 .gh-content > ul,
 .gh-content > ol,
 .gh-content > dl {
@@ -124,7 +145,7 @@
 }
 
 figcaption {
-    padding: 0rem 1.5rem 0;
+    padding: 0.8rem 1.5rem 0;
     text-align: center;
     color: #F5FFE3;
     font-weight: 600;
@@ -136,26 +157,53 @@ figcaption strong {
     color: rgba(0,0,0,0.8);
 }
 
-.gh-canvas :not(pre) code {
+.gh-canvas p code,
+.gh-canvas li code,
+.gh-canvas blockquote code,
+.gh-canvas figcaption code,
+.gh-canvas td code,
+.gh-canvas th code {
     vertical-align: middle;
     padding: 0.15em 0.4em 0.15em;
     font-weight: 400 !important;
     font-size: 0.9em;
     line-height: 1em;
-    color: #dc0050;
-    border-radius: 0.25em;
+    color: #7fbbb3;
+    background: rgba(46, 56, 60, 0.8);
+    border: 1px solid rgba(92, 106, 114, 0.45);
+    border-radius: 0.35em;
+}
+
+.gh-content .kg-code-card,
+.gh-content pre {
+    margin: 5vmin 0;
 }
 
 pre[class*="language-"] {
-    background: inherit !important;
+    background: transparent !important;
 }
 
-.gh-canvas > pre {
-    overflow: scroll;
-    padding: 16px 20px;
-    background: rgba(255,255,255,0.8);
-    border-radius: 5px;
-    box-shadow: 0 2px 6px -2px rgba(0,0,0,.1), 0 0 1px rgba(0,0,0,.4);
+.gh-content .kg-code-card pre,
+.gh-content pre {
+    overflow-x: auto;
+    padding: 1.9rem 2.2rem;
+    background: rgba(16, 21, 24, 0.94) !important;
+    border: 1px solid rgba(92, 106, 114, 0.72);
+    border-radius: 1rem;
+    box-shadow:
+        inset 0 1px 0 rgba(211, 198, 170, 0.04),
+        0 0 0 1px rgba(26, 31, 35, 0.35);
+}
+
+.gh-content .kg-code-card pre code,
+.gh-content pre code {
+    display: block;
+    background: transparent !important;
+    border: 0;
+    padding: 0;
+    color: var(--color-base);
+    font-size: 1.55rem;
+    line-height: 1.65;
 }
 
 .kg-embed-card {

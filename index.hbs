@@ -1,7 +1,7 @@
 {{!< default}}
 <div class="gh-page">
     <div class="gh-container gh-terminal-layout">
-        <section class="gh-terminal-main">
+        <section class="gh-terminal-main" data-terminal-boot-root>
             <p class="gh-command-line" data-terminal-step data-terminal-line>
                 <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
                 <span class="gh-command-text" data-terminal-type>whoami</span>
@@ -22,7 +22,7 @@
 
             <p class="gh-command-line gh-command-line-spaced" data-terminal-step data-terminal-line>
                 <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
-                <span class="gh-command-text" data-terminal-type>ls -la ./posts/</span>
+                <span class="gh-command-text" data-terminal-type data-terminal-tail-base="{{pagination.limit}}">ls -la ./posts/ | tail -{{pagination.limit}}</span>
             </p>
 
             <div class="gh-terminal-listing" data-terminal-step data-terminal-group>
