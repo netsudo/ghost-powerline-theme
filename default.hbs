@@ -17,10 +17,7 @@
 <div class="gh-viewport">
     <div class="gh-shell">
         <header id="gh-head" class="gh-head">
-            <div class="gh-head-top gh-container">
-                <p class="gh-head-title">{{@site.title}}@hexed:~</p>
-            </div>
-            <div class="gh-head-navline gh-container">
+            <div class="gh-head-navline">
                 <div class="gh-head-brand">
                     <a class="gh-head-logo" href="{{@site.url}}">
                         {{#if @site.logo}}
@@ -33,15 +30,6 @@
                 <nav class="gh-head-menu" aria-label="Primary navigation">
                     {{navigation}}
                 </nav>
-                <div class="gh-head-actions">
-                    {{#if @site.members_enabled}}
-                        {{^if @member}}
-                            <a class="gh-shell-action" href="{{@site.signup_url}}">subscribe</a>
-                        {{else}}
-                            <a class="gh-shell-action" href="#/portal/account">account</a>
-                        {{/if}}
-                    {{/if}}
-                </div>
             </div>
         </header>
 
