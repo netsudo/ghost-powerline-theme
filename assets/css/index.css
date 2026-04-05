@@ -358,8 +358,71 @@ html,
     color: var(--color-base);
 }
 
+.gh-terminal-idle {
+    align-items: center;
+}
+
+.gh-terminal-idle-cursor {
+    display: inline-block;
+    width: 0.7em;
+    height: 1.15em;
+    background: var(--color-base);
+    animation: terminal-cursor 0.9s steps(1) infinite;
+}
+
 .gh-dim {
     color: #7f93c7;
+}
+
+.gh-terminal-boot [data-terminal-step],
+.gh-terminal-boot [data-terminal-item] {
+    opacity: 0;
+}
+
+.gh-terminal-boot [data-terminal-step] {
+    transform: translateY(0.6rem);
+}
+
+.gh-terminal-boot [data-terminal-item] {
+    transform: translateY(0.35rem);
+}
+
+.gh-terminal-boot [data-terminal-step].is-terminal-visible,
+.gh-terminal-boot [data-terminal-item].is-terminal-visible,
+.gh-terminal-booted [data-terminal-step],
+.gh-terminal-booted [data-terminal-item] {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 140ms ease,
+        transform 140ms ease;
+}
+
+.gh-terminal-boot [data-terminal-group] > *:not(.is-terminal-visible) {
+    opacity: 0;
+    transform: translateY(0.35rem);
+}
+
+.gh-terminal-boot [data-terminal-group] > *.is-terminal-visible,
+.gh-terminal-booted [data-terminal-group] > * {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity 140ms ease,
+        transform 140ms ease;
+}
+
+[data-terminal-type].is-terminal-typing::after {
+    content: "█";
+    margin-left: 0.15em;
+    color: var(--color-base);
+    animation: terminal-cursor 0.9s steps(1) infinite;
+}
+
+@keyframes terminal-cursor {
+    50% {
+        opacity: 0;
+    }
 }
 
 .gh-header {

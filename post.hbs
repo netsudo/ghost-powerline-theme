@@ -5,21 +5,21 @@
 <article class="gh-article {{post_class}}">
     <div class="gh-container gh-terminal-layout gh-terminal-layout-post">
         <section class="gh-terminal-main">
-            <p class="gh-command-line">
+            <p class="gh-command-line" data-terminal-step data-terminal-line>
                 <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
-                <span class="gh-command-text">cat ./posts/{{slug}}.md</span>
+                <span class="gh-command-text" data-terminal-type>cat ./posts/{{slug}}.md</span>
             </p>
 
-            <header class="gh-header gh-canvas">
-                <h1 class="gh-title">{{title}}</h1>
-                <span class="gh-post-meta">{{primary_author.name}} :: <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time></span>
+            <header class="gh-header gh-canvas" data-terminal-step data-terminal-group>
+                <h1 class="gh-title" data-terminal-item>{{title}}</h1>
+                <span class="gh-post-meta" data-terminal-item>{{primary_author.name}} :: <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time></span>
 
                 {{#if custom_excerpt}}
-                <p class="gh-excerpt">{{custom_excerpt}}</p>
+                <p class="gh-excerpt" data-terminal-item>{{custom_excerpt}}</p>
                 {{/if}}
 
                 {{#if feature_image}}
-                <figure class="gh-feature-image">
+                <figure class="gh-feature-image" data-terminal-item>
                     <picture>
                       <source
                         srcset="
@@ -63,17 +63,22 @@
                 {{/if}}
             </header>
 
-            <div class="gh-content gh-canvas">
+            <div class="gh-content gh-canvas" data-terminal-step data-terminal-group>
                 {{content}}
             </div>
 
-            <footer class="gh-footer gh-canvas">
+            <footer class="gh-footer gh-canvas" data-terminal-step>
                 {{#if comments}}
                 <section class="gh-post-comments">
                     {{comments}}
                 </section>
                 {{/if}}
             </footer>
+
+            <p class="gh-command-line gh-terminal-idle" data-terminal-step>
+                <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
+                <span class="gh-terminal-idle-cursor" aria-hidden="true"></span>
+            </p>
         </section>
 
         <aside class="gh-terminal-sidebar">
