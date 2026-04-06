@@ -1,5 +1,5 @@
 {
-    "name": "hexed-theme",
+    "name": "ghost-powerline-theme",
     "description": "Custom theme designed for my personal blog.",
     "demo": "https://hexed.io",
     "version": "1.0.0",
@@ -36,7 +36,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/netsudo/hexed-theme"
+        "url": "https://github.com/netsudo/ghost-powerline-theme"
     },
     "devDependencies": {
         "@babel/core": "^7.21.0",

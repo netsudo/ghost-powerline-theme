@@ -1,6 +1,7 @@
 # Learn more → https://github.com/TryGhost/action-deploy-theme#getting-started
 name: Deploy Theme
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
