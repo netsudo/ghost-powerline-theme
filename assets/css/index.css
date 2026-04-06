@@ -182,7 +182,7 @@ html,
 }
 
 .gh-head-menu .nav li + li a {
-    padding-left: 1.45rem;
+    padding-left: 2.5rem;
 }
 
 .gh-head-menu .nav a::before {
@@ -753,7 +753,7 @@ html,
     }
 
     #gh-head .gh-head-menu .nav li + li a {
-        padding-left: 1.12rem;
+        padding-left: 2rem;
     }
 
     #gh-head .gh-head-actions {
@@ -831,7 +831,7 @@ html,
 
     .gh-terminal-main,
     .gh-terminal-sidebar {
-        padding: 2rem 1.6rem;
+        padding: 1.6rem 1.15rem;
     }
 
     .gh-command-line {
@@ -839,7 +839,12 @@ html,
     }
 
     .gh-card-link {
-        padding: 1.8rem;
+        padding: 0.25rem 0;
+    }
+
+    .gh-card-row,
+    .gh-card-excerpt {
+        text-align: left;
     }
 
     .gh-post-meta-container,
