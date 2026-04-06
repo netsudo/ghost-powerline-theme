@@ -2,28 +2,41 @@
 
 {{#post}}
 <article class="gh-article {{post_class}}">
-    {{#match @page.show_title_and_feature_image}}
-    <header class="gh-header gh-canvas">
-        <h1 class="gh-title">{{title}}</h1>
+    <div class="gh-container gh-terminal-layout gh-terminal-layout-single">
+        <section class="gh-terminal-main" data-terminal-boot-root>
+            <p class="gh-command-line" data-terminal-step data-terminal-line>
+                <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
+                <span class="gh-command-text" data-terminal-type>cat ./pages/{{slug}}.md</span>
+            </p>
 
-        {{#if custom_excerpt}}
-            <p class="gh-excerpt">{{custom_excerpt}}</p>
-        {{/if}}
+            {{#match @page.show_title_and_feature_image}}
+            <header class="gh-header gh-canvas" data-terminal-step data-terminal-group>
+                <h1 class="gh-title" data-terminal-item>{{title}}</h1>
 
-        {{#if feature_image}}
-            <figure class="gh-feature-image">
-                <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
-                {{#if feature_image_caption}}
-                    <figcaption>{{feature_image_caption}}</figcaption>
+                {{#if custom_excerpt}}
+                    <p class="gh-excerpt" data-terminal-item>{{custom_excerpt}}</p>
                 {{/if}}
-            </figure>
-        {{/if}}
-    </header>
-    {{/match}}
 
-    <div class="gh-content gh-canvas">
-        {{content}}
+                {{#if feature_image}}
+                    <figure class="gh-feature-image" data-terminal-item>
+                        <img src="{{feature_image}}" alt="{{#if feature_image_alt}}{{feature_image_alt}}{{else}}{{title}}{{/if}}" />
+                        {{#if feature_image_caption}}
+                            <figcaption>{{feature_image_caption}}</figcaption>
+                        {{/if}}
+                    </figure>
+                {{/if}}
+            </header>
+            {{/match}}
+
+            <div class="gh-content gh-canvas" data-terminal-step data-terminal-group>
+                {{content}}
+            </div>
+
+            <p class="gh-command-line gh-terminal-idle" data-terminal-step>
+                <span class="gh-command-prompt">visitor@{{@site.title}}:~$</span>
+                <span class="gh-terminal-idle-cursor" aria-hidden="true"></span>
+            </p>
+        </section>
     </div>
-
 </article>
 {{/post}}

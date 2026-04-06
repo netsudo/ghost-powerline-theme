@@ -4,18 +4,31 @@
 :root {
 
     /* Colours */
-    --color-primary: var(--ghost-accent-color, #3eb0ef);
-    --color-base: #131313;
-    --color-border: #ddd;
-    --color-bg: #070a0e;
-    --color-success: #80b912;
-    --color-error: #f05230;
-    --glow-dur: 6s;
+    --color-primary: #a7c080;
+    --color-base: #d3c6aa;
+    --color-border: #3c4841;
+    --color-bg: #1e2326;
+    --color-bg-alt: #272e33;
+    --color-bg-soft: #2e383c;
+    --color-tab-active-bg: #232a2e;
+    --color-tab-active-fg: #d3c6aa;
+    --color-tab-inactive-bg: #374145;
+    --color-tab-inactive-fg: #9da9a0;
+    --color-tab-bar-bg: #2e383c;
+    --color-tab-hover-fg: #f3ead3;
+    --color-success: #a7c080;
+    --color-error: #e67e80;
+    --color-accent-blue: #7fbbb3;
+    --color-accent-aqua: #83c092;
+    --color-accent-gold: #dbbc7f;
+    --color-accent-orange: #e69875;
+    --color-accent-red: #e67e80;
+    --shadow-color: rgba(0, 0, 0, 0.35);
 
     /* Fonts */
-    --font-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-    --font-serif: Georgia, Times, serif;
-    --font-mono: Menlo, Courier, monospace;
+    --font-sans-serif: "Terminess Nerd Font Mono", "Terminess Nerd Font", "Terminus", "Hack Nerd Font Mono", "Hack Nerd Font", "Hack", "IBM Plex Mono", "JetBrains Mono", "Iosevka", "SFMono-Regular", "Menlo", monospace;
+    --font-serif: "Terminess Nerd Font Mono", "Terminess Nerd Font", "Terminus", "Hack Nerd Font Mono", "Hack Nerd Font", "Hack", "IBM Plex Mono", "JetBrains Mono", "Iosevka", "SFMono-Regular", "Menlo", monospace;
+    --font-mono: "Terminess Nerd Font Mono", "Terminess Nerd Font", "Terminus", "Hack Nerd Font Mono", "Hack Nerd Font", "Hack", "IBM Plex Mono", "JetBrains Mono", "Iosevka", "SFMono-Regular", "Menlo", monospace;
     --font-light: 100;
     --font-normal: 400;
     --font-bold: 700;
@@ -31,6 +44,6 @@
     /* Sizes */
     --height: 4rem;
     --margin: 2rem;
-    --radius: 0.5rem;
+    --radius: 1rem;
 
 }
