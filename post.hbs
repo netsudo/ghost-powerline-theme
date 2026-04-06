@@ -12,7 +12,7 @@
 
             <header class="gh-header gh-canvas" data-terminal-step data-terminal-group>
                 <h1 class="gh-title" data-terminal-item>{{title}}</h1>
-                <span class="gh-post-meta" data-terminal-item>{{primary_author.name}} :: <time datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time></span>
+                <span class="gh-post-meta" data-terminal-item><time datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY-MM-DD"}}</time></span>
 
                 {{#if feature_image}}
                 <figure class="gh-feature-image" data-terminal-item>
@@ -83,10 +83,8 @@
                     <span class="gh-command-prompt">~$</span>
                     <span class="gh-command-text">whoami</span>
                 </p>
-                <h2 class="gh-sidebar-title">{{primary_author.name}}</h2>
-                {{#if primary_author.bio}}
-                    <p class="gh-sidebar-copy">{{primary_author.bio}}</p>
-                {{else}}
+                <h2 class="gh-sidebar-title">{{@site.title}}</h2>
+                {{#if @site.description}}
                     <p class="gh-sidebar-copy">{{@site.description}}</p>
                 {{/if}}
             </section>
