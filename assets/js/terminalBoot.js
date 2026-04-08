@@ -89,10 +89,6 @@ export default async function terminalBoot() {
 
     hydrateDynamicTerminalText();
 
-    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-        return;
-    }
-
     const steps = bootRoot.querySelectorAll(STEP_SELECTOR);
 
     if (!steps.length) {

@@ -48,6 +48,7 @@ body {
     min-height: 100vh;
     margin: 0;
     padding: 0;
+    background-color: #111517;
     color: var(--color-base);
     font-family: var(--font-sans-serif);
     font-size: 15px;

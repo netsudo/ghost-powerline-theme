@@ -35,7 +35,7 @@ html,
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background: transparent;
+    background: #111517;
 }
 
 .gh-main {
@@ -61,7 +61,6 @@ html,
         0 1rem 2.4rem rgba(0, 0, 0, 0.22),
         inset 0 1px 0 rgba(211, 198, 170, 0.05);
     overflow: hidden;
-    backdrop-filter: blur(14px) saturate(1.05);
 }
 
 .gh-page,
